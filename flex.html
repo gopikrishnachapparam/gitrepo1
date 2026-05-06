@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+             display:flex;/* by default flex-direction is row  , cross axis is column */
+            flex-direction: column; /* to specify the direction of the main axis (row or column) */
+            justify-content : center; /* to align items along the main axis */
+            gap:20px; /* to add space between items , instead of using margin */    
+        }
+
+        .box{
+            padding :20px;
+            background-color:lightblue;
+            width:100px;
+            height:10px;
+           
+        }
+
+        </style>
+ </head>
+ <body>
+<!-- Before Using this we were using float and clear , inline- block 
+With Flexbox we can easily align the items in a container and distribute the space between them.
+ It also provides more control over the layout and allows for responsive design.
+ clean alignment , responsive design or layout , and easy to use as per the industry standards.
+-->
+
+
+<!--
+ 
+ 1. Flex Container: To create a flex container, you need to set the display property of the parent element to flex. This will enable the flexbox layout for that container.
+
+ .container {
+   display: flex;  // by default flex-direction is row  , cross axis is column
+ }
+ 
+
+ Main Properties of Flex Container:
+
+    1. flex-direction: This property defines the direction of the main axis (the primary axis along which the flex items are laid out). It can be set to row (default), column, row-reverse, or column-reverse.
+
+    a row: The flex items are laid out in a horizontal row, from left to right.
+     .container {
+   display: flex;  // by default flex-direction is row  , cross axis is column
+    flex-direction: row; // or column, row-reverse, column-reverse
+    justify-content: center; // to align items along the main axis
+    align-items: center; // to align items along the cross axis
+    justify-content: space-between; // to distribute space between items along the main axis and usually used in navbar
+    align-items: stretch; // to stretch items to fill the container along the cross axis
+ }
+
+ b column: The flex items are laid out in a vertical column, from top to bottom.
+ .container {
+     align-items: center; // to align items along the cross axis
+     gap: 10px; // to add space between items , instead of using margin
+     display: flex;  // by default flex-direction is row  , cross axis is column
+     flex-direction: column; // or row, row-reverse, column-reverse
+
+     justify-content: center; // to align items along the main axis
+     justify-content: space-between; // to distribute space between items along the main axis and usually used in navbar
+     align-items: stretch; // to stretch items to fill the container along the cross axis
+ }
+-->
+
+
+    <div class="container">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+    </div>
+ </body>
+ </html>
+ 
