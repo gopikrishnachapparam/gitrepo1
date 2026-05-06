@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>LoginSystem</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+   
+  </welcome-file-list>
+  
+  
+  
+    <!-- Step 1: Declare the Servlet -->
+    <servlet>
+    <!-- It could be any name -->
+        <servlet-name>MyLoginServlet</servlet-name>
+     <!-- define the packagename with your actual servlet name -->
+        <servlet-class>com.ecomm.servlet.LoginServlet</servlet-class>
+    </servlet>
+
+    <!-- Step 2: Map the Servlet to a URL -->
+    <servlet-mapping>
+        <servlet-name>MyLoginServlet</servlet-name>
+    <!-- provided to the user/client -->
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>ProductServlet</servlet-name>
+    <servlet-class>com.quickcart.controller.ProductServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ProductServlet</servlet-name>
+    <url-pattern>/products</url-pattern>
+</servlet-mapping>
+</web-app>

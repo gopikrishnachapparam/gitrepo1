@@ -1,0 +1,32 @@
+Session Management
+
+
+ususally the HTTP it is a stateless protocol so to maintain the state of a page we use session management
+
+Session be handled client side / server side
+
+client side  :  cookies  / url rewriting / hidden form field
+server side   : HttpSession ( by default it is disabled we have to enable it)
+				session.setMaxInteractiveInterval(300); // Set timeout
+                   or you can set in web.xml    
+        <session-config><session-timeout>10</session-timeout></session-config>
+Flow : -
+
+Login ---> session created ---> cookie stored 
+|
+|
+|
+Next request ---> cookie will be sent ---> session will be identified
+
+create a session  ->  HttpSession session = request.getSession();
+store the data        session.setAttribute("user", "admin");
+get the data      ->  String user = (String)session.getAttribute("user");
+destroy session   ->  session.invalid();
+
+cookie --> JSessionID will be stored on browser ( automatically)
+create a cookie  :   Cookie cookie = new Cookie("user" , "admin");
+                     response.addCookie(cookie);
+retrieve the info from cookie    : Cookie[] cookies = request.getCookies();
+                      
+url rewriting ->  /dashboard?Jsessionid=343434
+<input type="hidden" name="user" value="admin">
