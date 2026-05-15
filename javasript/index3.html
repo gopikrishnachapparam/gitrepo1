@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- id is the alias or unique identifier name to give to an html element -->
+    <h1 id="welcome">Default Text</h1> <!-- html element-->
+
+
+<ul></ul>
+    <button id ="changeText" > Change the HTML Content</button>
+    <script>
+
+            const button = document.getElementById("changeText");
+
+            button.addEventListener("click" ,function()
+            {
+                    document.getElementById("welcome").innerHTML = " we have changed the Text";
+
+            // DOM tree updates in real time when java script runs and you can interact with it directly  to
+            //  see the changes in the html page without refreshing  the page
+            } 
+        );
+    </script>
+
+    <!--The JavaScript HTML DOM (Document Object Model) represents the structure of an HTML document as a tree of objects. 
+    It allows JavaScript to interact with and modify the content and elements of a webpage dynamically.
+    We can access the elements using various methods like getElementById, getElementsByClassName, querySelector, etc. and manipulate them using properties like innerHTML, style, etc.
+By using the DOM, JavaScript can access and manipulate HTML elements, attributes, and styles.
+DOM manipulation enables updating the content, structure, or styling of a page without reloading the webpage.
+-->
+
+    <!-- DOM -- Document Object Model --  which is used to change the html data dynamically
+       getElementById() == used to access the html elements by ID 
+       innerHTML  ==  to update the page dynamically without refreshing 
+       addEventListener == will wait for a click event 
+    -->
+
+    <!-- <script>
+
+let day = prompt("Enter the value as  a day name : ")
+switch(day)
+{
+case "Monday" : console.log("Today is :" ,day) ; break;
+case "Tuesday" : console.log("Today is :" ,day) ; break;
+case "Wednesday" : console.log("Today is :" ,day) ; break;0
+
+}
+    </script> -->
+</body>
+</html>
